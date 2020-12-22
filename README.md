@@ -57,3 +57,12 @@ consultar listado de tipos de sangre
 METODO GET
 http://localhost:3700/api/tiposDeSangre
 ```
+
+# IMPORTANTE
+
+```
+importar archivo expedientes.sql
+```
+
+modificar el archivo .env
+con usuario y contraseña
