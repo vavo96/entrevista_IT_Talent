@@ -34,7 +34,8 @@ const getPaciente = async(request, response) => {
 }
 
 const crearPasiente = async(request, response) => {
-    if (pacienteBusqueda(request.body.id)) {
+    const pacienteConsultado = await pacienteBusqueda(request.body.id);
+    if (pacienteConsultado) {
         return response.status(400).json({
             ok: false,
             msg: 'El expediente ya existe'
@@ -43,7 +44,7 @@ const crearPasiente = async(request, response) => {
     const paciente = await db.pacientes.create(request.body);
     response.status(200).json({
         ok: true,
-        paciente
+        msg: `El expediente ${request.body.id} fue creado exitosamente`
     });
 }
 
