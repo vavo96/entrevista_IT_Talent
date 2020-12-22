@@ -1,0 +1,9 @@
+{
+    "database": {
+        "host": "localhost",
+        "port": 3700,
+        "user": "root",
+        "password": "password",
+        "database": "expedientes"
+    }
+}
